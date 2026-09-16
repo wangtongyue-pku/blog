@@ -11,7 +11,9 @@ content:
     path: content/posts
     format: toml-frontmatter
     delimiters: "+++"
-    filename: "{primary}.md"
+    filename:
+     template: "{primary}.md"
+     field: create
 
     fields:
       - name: title

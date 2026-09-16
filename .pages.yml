@@ -1,0 +1,50 @@
+media:
+  - name: images
+    label: 图片
+    input: static/images
+    output: /images
+
+content:
+  - name: posts
+    label: 文章
+    type: collection
+    path: content/posts
+    format: toml-frontmatter
+    delimiters: "+++"
+    filename: "{primary}.md"
+
+    fields:
+      - name: title
+        label: 标题
+        type: string
+        required: true
+
+      - name: date
+        label: 日期
+        type: date
+        required: true
+
+      - name: draft
+        label: 草稿
+        type: boolean
+        default: false
+
+      - name: body
+        label: 正文
+        type: rich-text
+        options:
+          format: markdown
+          media: images
+          path: static/images
+
+    view:
+      fields: [title, date, draft]
+      primary: title
+      sort: [date]
+      default:
+        sort: date
+        order: desc
+
+settings:
+  content:
+    merge: true

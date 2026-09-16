@@ -1,0 +1,11 @@
+baseURL = 'http://localhost:1313/'
+locale = 'zh-cn'
+title = 'MyBlog'
+theme = 'PaperMod'
+
+[params]
+  description = '记录那些没地方说的话。'
+
+  [params.homeInfoParams]
+    Title = 'MyBlog'
+    Content = '记录那些没地方说的话。'

@@ -1,0 +1,5 @@
+<script>
+    if (sessionStorage.getItem("blogUnlocked") !== "true") {
+        window.location.href = "{{ "password.html" | relURL }}";
+    }
+</script>
